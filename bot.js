@@ -368,20 +368,6 @@ message.channel.send("`Error`:" + Julian)
   }
   });
 
-
-client.on('message', message => {
-    if (message.content === "*help") {
-    let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setFooter(`© Made Robert J.Shelby ™.`, 'https://images-ext-2.discordapp.net/external/X9SanEG0s7Dtv3krTgy-kod_fj6JRVJ2AG4JryCiiz0/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/375761288518828042/fffa31c797e88cf059dd6db424ff456a.png?width=80&height=80')
-  .setColor("#000000")
-  .addField("Done | تــــم" , ":envelope: | :sleuth_or_spy::skin-tone-3:شيك علي في الخاص")
- 
- 
-  
-  message.channel.sendEmbed(embed);
-  }
-  });
  
 
 
@@ -431,7 +417,7 @@ client.on("message", msg => {
 
 
 client.on("message", message => {
-    if(message.content.startsWith(prefix + 'v2min')) {
+    if(message.content.startsWith(prefix + '*v2min')) {
      let args = message.content.split(" ").slice(1);
        var nam = args.join(' ');
     
@@ -496,7 +482,7 @@ client.on('message', function(message) {
 
 
 client.on('message', message => {
-  if(message.content === prefix + 'stats') {
+  if(message.content === prefix + '*stats') {
     message.channel.send('**I have `' + `${client.guilds.size}` + '` Server 🔥, `' + `${client.channels.size}` + '` Channels and `' + `${client.users.size}` + '` users.**')
     message.channel.send('**- If you want me to join in your server? just do `' + `${prefix}invite` + '` **');
   }
@@ -712,7 +698,7 @@ client.on("message", message => {
 
 
 client.on('message', message => {
-    if (message.content.startsWith("!avatar")) {  //// الامر و البرفيكس
+    if (message.content.startsWith("*avatar")) {  //// الامر و البرفيكس
         if (message.author.bot) return
         var mentionned = message.mentions.users.first();
     var omar;
